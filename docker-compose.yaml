@@ -12,7 +12,7 @@ services:
     env_file:
       - .env
     environment:
-      - spring.datasource.url=jdbc:postgresql://postgres:5432/$POSTGRES_DB
+      - spring.r2dbc.url=jdbc:postgresql://postgres:5432/$POSTGRES_DB
     depends_on:
       postgres:
         condition: service_healthy
